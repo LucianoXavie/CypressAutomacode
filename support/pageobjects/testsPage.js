@@ -9,7 +9,7 @@ const url = Cypress.config("baseUrl")
 class TestPage  {
    acessarSite() {
        cy.visit(url)
-       cy.wait(6000)
+       cy.wait(4000)
     }
    
    inserirNome(){
@@ -20,32 +20,39 @@ class TestPage  {
 
    inserirEndereco(){
       cy.get(testselements.campoEndereco()).type('Rua Nicia Coutinho  Nº 40')
+      cy.screenshot()
    }
 
    inserirEmail(){
        cy.get(testselements.campoEmail()).type('lu99_xavier@hotmail.com')
+       cy.screenshot()
    }
 
    inserirTelefone(){
       cy.get(testselements.campoTelefone()).type ('926983940')
+      cy.screenshot()
    }
     
    inserirGenero(){
       cy.get(testselements.campoGenero()).click()
+      cy.screenshot()
 
    }
    
    inserirHobbis(){
       cy.get(testselements.campoHobbis()).click()
+      cy.screenshot()
    }
 
    inserirLingua(){
        cy.get(testselements.campoLingua()).click()
        cy.get(testselements.campoLinguaPortuguese()).click()
+       cy.screenshot()
    }
 
    inserirHabilidades(){
        cy.get(testselements.campoHabilidades()).select('AutoCAD')
+       cy.screenshot()   
    }
 
    inserirPais(){
@@ -68,19 +75,23 @@ class TestPage  {
 
   inserirSenha(){
      cy.get(testselements.campoSenha()).type('12345')
+     cy.screenshot()
    }
 
    inserirConfirmarSenha(){
       cy.get(testselements.campoConfimarSenha()).type('12345')
+      cy.screenshot()
    }
 
    clicarReflesh (){
       cy.get(testselements.botaoReflesh()).click()
+      cy.screenshot()
    }
 
    validar(){
    cy.get(testselements.validarTitulo()).contains('Automation Demo Site')
-   }
+   cy.screenshot()
+}
 
  }
   export default TestPage;

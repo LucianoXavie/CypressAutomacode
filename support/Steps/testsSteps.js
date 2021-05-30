@@ -27,12 +27,12 @@ Then("Inserir Informacoes para Registro", () => {
    
 } )
 
-And ("clico em reflesh", ()=>{
+And ("clico em reflesh", ()=> {
      Pagetest.clicarReflesh()
 })
 
-//When("Validar", () =>{
-   // Pagetest.validar()
+When("Validar", () =>{
+    Pagetest.validar()
 
-//})
+})
 
